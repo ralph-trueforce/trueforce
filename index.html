@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href='img/favicon.ico' rel='icon' type='image/x-icon'/>  
+	<title>Trueforce</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/trueforce.css">
+</head>
+<body>
+<div class="container-fluid">
+	<div id="header-container">
+		<div id="header">
+			<nav class="navbar navbar-default">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="/" style="padding-left: 20px;">
+							<img id="brand-image" src="img/TF-LogoW.png">
+						</a>
+					</div>
+
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav navbar-right">
+							<li onmouseover="vertical_menu();" onmouseout="hide_vertical_menu();"><a id="aservices" >Services</a>
+								<ul onmouseover="vertical_menu();" id="vmenu" class="vert" >
+									<li class="v"><a href="development.html">Software Development</a></li>
+									<li class="v"><a href="salesforce.html">Salesforce</a></li>
+									<li class="v"><a href="contact.html">Cloud Contact Center</a></li>
+									<li class="v"><a href="customer.html">Customer Experience</a></li>
+									<li class="v"><a href="primarypolicy.html">Primary Policy</a></li>
+								</ul>
+							</li>
+							<li><a href="about.html">About Us</a></li>
+							<li><a href="#tf-cloud-contact">Contact us</a></li>
+						</ul>
+					</div><!-- /.navbar-collapse -->
+				</div><!-- /.container-fluid -->
+			</nav>
+		</div>
+	</div>
+	<div id="tf-home" class="row">
+		<div class="container" >
+			<p><span id="we-are">We Are</span></p>
+			<p style="padding-top: 0px; line-height: 1; width: 70%;">a leading software services and solution consulting company</p>
+			<p style="padding-top: 0px; line-height: 1; width: 80%;">
+				<div class="icons-home">
+					<a href="development.html">
+						<img src="img/TF-HomeIcon-SoftwareDevelopment.png" style="margin-bottom:10px"><br>
+						<span style="color:white;">Software Development</span>
+					</a>
+				</div>
+				<div class="icons-home">
+					<a href="salesforce.html">
+						<img src="img/TF-HomeIcon-Salesforce.png" style="margin-bottom:10px"><br>
+						<span style="color:white;">Salesforce</span>
+					</a>
+				</div>
+				<div class="icons-home">
+					<a href="contact.html">
+						<img src="img/TF-HomeIcon-ContactCenter.png" style="margin-bottom:10px"><br>
+						<span style="color:white;">Cloud Contact Center</span>
+					</a>
+				</div>
+				<div class="icons-home">
+					<a href="customer.html">
+						<img src="img/TF-HomeIcon-UXDesign.png" style="margin-bottom:10px"><br>
+						<span style="color:white;">CX Design</span>
+					</a>
+				</div>
+			</p>
+
+			<div class="down-arrow">
+				<a href="#tf-services">
+					<img class="next-arrow" src="img/TF-ScrollButton-Default.png">
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div id="tf-services" class="row">
+		<div class="container">
+			<div class="row">
+				<p class="title-a" style="margin-top:80px;margin-bottom:30px;">Software Development</p>
+			</div>
+			<div class="row" id="subtitle-row">
+				<div class="col-md-3">
+					<span class="subtitle">DESIGN</span>
+				</div>
+				<div class="col-md-3">
+					<span class="subtitle">DEVELOPMENT</span>
+				</div>
+				<div class="col-md-3">
+					<span class="subtitle">TESTING</span>
+				</div>
+				<div class="col-md-3">
+					<span class="subtitle">IMPLEMENTATION</span>
+				</div>
+			</div>
+			<div class="row" style="align-items: center;">
+				<div id="radial-menu">
+					<span id="tf-label4" class="tf-label">Implementation</span>
+					<span id="tf-label1" class="tf-label">Design</span>
+					<ul class="ringDev">
+						<li class="sliceDev"><div class="outer slice-contents"></div></li>
+						<li class="sliceDev"><div class="outer slice-contents"></div></li>
+						<li class="sliceDev"><div class="outer slice-contents"></div></li>
+						<li class="sliceDev"><div class="outer slice-contents"></div></li>
+						<ul class="inner-ring">
+							<li class="sliceDev"><div class="inner slice-contents"></div></li>
+							<li class="sliceDev"><div class="inner slice-contents"></div></li>
+							<li class="sliceDev"><div class="inner slice-contents"></div></li>
+							<li class="sliceDev"><div class="inner slice-contents"></div></li>
+						</ul>
+						<div class="back-center">
+							<p id="center-paragraph">
+								<!--Front End<br>-->
+								<!--Back End<br>-->
+								<!--SOA<br>-->
+								<!--Project Management<br>-->
+								<!--Mobile-->
+							</p>
+						</div>
+					</ul>
+					<span id="tf-label3" class="tf-label">Testing</span>
+					<span id="tf-label2" class="tf-label">Development</span>
+				</div>
+			</div>
+			<div class="row areas2">
+				<button type="button" class="btn btn-success" onclick="location.href='development.html';">LEARN MORE</button>
+			</div>
+		</div>
+
+	</div>
+
+	<div id="tf-salesforce-consulting" class="row salesforce-consulting">
+		<div class="container" style="margin-top:40px;margin-bottom:40px;">
+			<div class="row areas">
+				<p class="title-a-2">Salesforce Consulting</p>
+				<p class="tf-paragraph" style="margin-top:40px; margin-bottom:40px;">Trueforce provides Salesforce consulting services so your business can take full advantage
+					of cloud computing. We get you on track with CRM, system integration and implement
+					third-party integration to make your business work efficiently.</p>
+			</div>
+			<div class="row areas" style="margin: 0 15%;">
+				<a href="#" style="color:lightseagreen;"><div class="imageContainer">Planning and Design</div></a>
+				<a href="#" style="color:lightseagreen;"><div class="imageContainer">Custom Development</div></a>
+				<a href="#" style="color:lightseagreen;"><div class="imageContainer">Implementation</div></a>
+			</div>
+			<div class="row areas" style="margin: 0 15%;">
+				<a href="#" style="color:lightseagreen;"><div class="imageContainer">Data Migration</div></a>
+				<a href="#" style="color:lightseagreen;"><div class="imageContainer">Integration</div></a>
+				<a href="#" style="color:lightseagreen;"><div class="imageContainer">Training</div></a>
+				<a href="#" style="color:lightseagreen;"><div class="imageContainer">Mobile</div></a>
+			</div>
+			<div class="row areas2" style="margin-top:40px;margin-bottom:40px;">
+				<button type="button" class="btn btn-success" onclick="location.href='salesforce.html';">LEARN MORE</button>
+			</div>
+		</div>
+	</div>
+
+	<!--<div id="tf-cloud-consulting" class="row cloud-consulting">-->
+		<!--<div class="container">-->
+			<!--<div class="row areas">-->
+				<!--<div>-->
+					<!--<p class="title-a-3" style="text-align: left; position: absolute; ">Cloud Contact Center Consulting</p>-->
+					<!--<p class="tf-paragraph" style="text-align: left; position: absolute; width: 650px;  margin-left:0px; margin-top:150px">Trueforce is your trusted partner for cloud contact center services. Our track record of more-->
+					<!--than 15 years shows that we understand every business has unique needs for its contact-->
+					<!--centers. We are proven experts, both technical and non-technical, who work within all layers of-->
+					<!--your organization to ensure easy implementation and confidence at all levels of your-->
+					<!--workforce. We have deep experience integrating solutions from industry leaders. Join forces-->
+					<!--with us and gain access to an intelligent platform of services that contribute to your business-->
+					<!--growth.</p>-->
+					<!--<div class="row" style="margin-top: 320px; margin-left: 0;position: absolute;">-->
+						<!--<a href="contact.html" class="tf-link">-->
+							<!--<span class="subtitle" style="margin-left: 0px;">LEARN MORE</span>-->
+						<!--</a>-->
+						<!--<a href="contact.html">-->
+							<!--<img class="arrow-right" src="img/TF-ArrowButton-Default.png">-->
+						<!--</a>-->
+					<!--</div>-->
+					<!--<img src="img/TF-HomeContactCenter.png" width="1150px">-->
+				<!--</div>-->
+			<!--</div>-->
+		<!--</div>-->
+	<!--</div>-->
+
+	<div id="tf-cloud-consulting1" class="row cloud-consulting">
+		<div class="container" id="cloud-cons">
+			<!--<div class="row areas">-->
+				<div class="col-sm-10">
+					<p class="title-a-3" style="text-align:left;" >Cloud Contact Center Consulting</p>
+					<p class="tf-paragraph" style="text-align:left; margin-left: 0; width: 60%;">Trueforce is your trusted partner for cloud contact center services. Our track record of more
+						than 15 years shows that we understand every business has unique needs for its contact
+						centers. We are proven experts, both technical and non-technical, who work within all layers of
+						your organization to ensure easy implementation and confidence at all levels of your
+						workforce. We have deep experience integrating solutions from industry leaders. Join forces
+						with us and gain access to an intelligent platform of services that contribute to your business
+						growth.</p>
+					<div class="row" style="margin-top: 40px; margin-left: 0;margin-bottom:30px;">
+						<a href="contact.html" class="tf-link">
+							<span class="subtitle" style="margin-left: 0px;">LEARN MORE</span>
+						</a>
+						<a href="contact.html">
+							<img class="arrow-right" src="img/TF-ArrowButton-Default.png">
+						</a>
+					</div>
+				</div>
+			<!--</div>-->
+		</div>
+	</div>
+
+	<div id="tf-software-development" class="row salesforce-consulting">
+		<div class="container">
+			<div class="row areas">
+				<p class="title-a-4">About us</p>
+				<p class="title-a-2" style="margin-top:10px !important;font-size: 20px;">Get to know who we are</p>
+				<p class="tf-paragraph" style="margin-left:60px; margin-right: 60px;">Founded in 2010, Trueforce is a global technology company headquartered in San Francisco, California.
+					Our client base includes Global 2000, private equity companies and venture-backed startups, all of which partner with
+					Trueforce for our expertise in product design, user experience design and engineering.
+					We have nearshore delivery offices in South America and hours that align with USA time zones.</p>
+			</div>
+			<div class="row areas2" style="margin-top:40px;margin-bottom:40px;">
+				<button type="button" class="btn btn-success" onclick="location.href='about.html';">LEARN MORE</button>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div id="tf-cloud-contact" class="row cloud-consulting">
+		<div class="container">
+			<form action="phpmailer/request-info.php" method="post">
+				<div class="row areas-fields">
+					<p class="title-a-3">Contact Us</p>
+					<div class="form-group">
+						<p class="contact-field"><input name="name" type="text" class="form-control" placeholder="Name"></p>
+						<p class="contact-field"><input name="email" type="text" class="form-control" placeholder="Email"></p>
+						<p class="contact-field"><input name="message" type="text" class="form-control" placeholder="Message"></p>
+						<input name="current" type="hidden" value="">
+					</div>
+				</div>
+				<div class="row areas2">
+					<button type="submit" class="btn btn-success">SEND</button>
+				</div>
+			</form>
+		</div>
+		<div id="email1" class="alert alert-success" style="display: none">
+			<strong>Success!</strong> Your message was sent successfully.
+		</div>
+		<div id="email0" class="alert alert-info" style="display: none">
+			<strong>Sorry</strong>, Try again later!.
+		</div>
+	</div>
+
+
+	<div id="tf-contact" class="row">
+		<div class="container" style="max-width: 990px;">
+			<div class="row">
+				<div class="col-md-4 city-info">
+					<p class="city-name">San Francisco</p>
+					<img width="95%" src="img/TF-ContactPic1.png">
+					<p class="city-title">TRUEFORCE HEADQUARTERS</p>
+					<p class="city-address">
+						1990 N. California Blvd.<br>
+						8th Floor Walnut Creek<br>
+						CA 94596
+					</p>
+				</div>
+				<div class="col-md-4 city-info">
+					<p class="city-name">Greater Denver Area</p>
+					<img width="95%" src="img/TF-ContactPic2.png">
+					<p class="city-title">REGIONAL OFFICES</p>
+					<p class="city-address">
+						357 S. McCaslin Blvd.<br>
+						Suite 200 Louisville<br>
+						CO 80027
+					</p>
+				</div>
+				<div class="col-md-4 city-info">
+					<p class="city-name">Cochabamba</p>
+					<img width="95%" src="img/TF-ContactPic3.png">
+					<p class="city-title">DELIVERY OFFICES</p>
+					<p class="city-address">
+						Av. America esq. Monteagudo<br>
+						Ed. Terrado Empresarial, Piso 3<br>
+						Cochabamba, Bolivia
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="row">
+		<div class="panel-footer text-center">
+			<div class="panel-footer">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="col-sm-8" style="text-align: left;">
+							<p style="margin-bottom: 110px;">
+								<a href="/">
+									<img id="brand-image-footer" src="img/TF-LogoFooter.png">
+								</a>
+							</p>
+						</div>
+						<div style="text-align: left;margin-bottom: 50px;" class="col-sm-9">
+							<p style="font-size:10px;">© Copyright 2010-2016, Trueforce Global Services Inc., All rights reserved</p>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="col-sm-5" style="text-align: left;">
+							<h4 id="footer-header1" style="font-weight: bold;"> Services </h4>
+							<p><a href="development.html" style="color: white;">Software Development</a></p>
+							<p><a href="salesforce.html" style="color: white;">Salesforce</a></p>
+							<p><a href="contact.html" style="color: white;">Cloud Contact Center</a></p>
+							<p><a href="customer.html" style="color: white;">Customer Experience</a></p>
+							<p><a href="primarypolicy.html" style="color: white;">Primary Policy</a></p>
+						</div>
+						<div class="col-sm-3" style="text-align: left;">
+							<h4 id="footer-header2" style="font-weight: bold;"><a href="about.html" style="color: white;">About Us</a></h4>
+						</div>
+						<div class="col-sm-4" style="text-align: left;">
+							<h4 id="footer-header3" style="font-weight: bold;"><a href="#tf-cloud-contact" style="color: white;">Contact Us</a></h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+</div>
+<script type="text/javascript" src="js/jquery-2.2.0.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/underscore-min.js"></script>
+<script type="text/javascript" src="js/trueforce.js"></script>
+<script type="text/javascript" src="js/menu.js"></script>
+
+<script type="text/javascript" src="js/prueba.js"></script>
+</body>
+</html>
