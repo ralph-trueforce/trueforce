@@ -1482,3 +1482,26 @@ li.v a:hover {
 	margin-left: 0px !important;
 	margin-right: 0px !important;
 }
+
+/*UX*/
+div.cx-ring #tf-label5 {
+	left: 27%;
+	top: 30px;
+	text-align: right;
+}
+
+div.cx-ring #tf-label2 {
+	left: 40%;
+	top: 40px;
+}
+
+div.cx-ring #tf-label4 {
+	text-align: right;
+	left: 27%;
+	top: -60px;
+}
+
+div.cx-ring #tf-label3 {
+	left: 20%;
+	top: -95px;
+}
