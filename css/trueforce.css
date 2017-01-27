@@ -575,6 +575,7 @@
 	background-size: 100% 100%;
 	z-index: -1;
 	background-color: #5E5E5E;
+	/*position: relative;*/
 }
 
 #tf-dev
@@ -660,7 +661,7 @@
 {
 	font-family: "ProximaNova-Semibold";
 	font-size: 16px;
-	/*margin-bottom: 35px;*/
+	/*margin-bottom: 40px;*/
 	position: absolute;
 	left: 0px;
 	bottom: 0;
@@ -668,7 +669,7 @@
 	display: flex;
 	justify-content: center;
 	width: 100%;
-	margin-bottom:-350px;
+	margin-bottom:-560px;
 }
 
 #tf-services
@@ -990,10 +991,12 @@ transform: skewY(18deg) rotate(9deg);
     left: 50px;
     border-radius: 50%;
     text-align: center;
-    padding-top: 40px;
+    /*padding-top: 40px;*/
+	padding: 45px 30px;
     font-family: 'ProximaNova-Semibold';
     font-size: 14px;
     line-height: 1.5;
+	vertical-align: middle;
 }
 
 .ring .inner-ring{
@@ -1408,10 +1411,10 @@ li.v a:hover {
 }
 
 .panel-footer {
-	    padding: 50px 15px;
+	    padding: 50px 15px 40px 15px;
 }
 
-.col-sm-5 p a{
+.col-sm-4 p a{
 	font-size: 12px;
 	font-family: 'ProximaNova-Regular';
 	color: #bec3c7 !important;
@@ -1422,7 +1425,7 @@ li.v a:hover {
 	font-family: 'ProximaNova-SemiBold';
 }
 
-.col-sm-5 p a:hover {
+.col-sm-4 p a:hover {
     color: #ffffff !important;
 	text-decoration: none;
 }
@@ -1457,3 +1460,25 @@ li.v a:hover {
 /*li a:hover {
 	color: #6AD8D8 !important;
 }*/
+
+
+.featurette .col-sm-2 {
+	margin-bottom: 20px;
+	text-align: center;
+	padding-left: 40px !important;
+	padding-right: 40px !important;
+}
+.trueforce-icons {
+	padding: 0px 80px;
+}
+.featurette div {
+	text-align: center;
+}
+
+.header-arrow {
+	position: relative !important;
+}
+.c {
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+}

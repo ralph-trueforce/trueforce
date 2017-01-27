@@ -89,22 +89,28 @@ $(document).ready(function(){
         var text=null;
         switch(i+1){
             case 1:
-                text='UX<br> UI<br> Business Analysis';
+                text='<br>UX<br> UI<br> Business Analysis<br>';
                 break;
             case 2:
-                text='Front end<br>Back End<br> SOA<br>Mobile<br>Project Management<br>Product Management';
+                text='Front end<br>Back End<br>SOA<br>Mobile<br>Project Management<br>Product Management';
                 break;
             case 3:
-                text='White Box<br>Black Box<br> Performance Testing';
+                text='<br>White Box<br>Black Box<br> Performance Testing<br>';
                 break;
             case 4:
-                text=' Deploy<br> Release<br> Support<br>';
+                text='<br>Deploy<br>Release<br>Support<br>';
                 break;
             default:
                 text='Front End<br>Back End<br>SOA<br>Project Management<br>Mobile';
         }
         $('#center-paragraph').html(text);
     };
+
+    $('#tf-label1').css("color","#6ADBD8");
+    $('#slice1').not(this).css("background","#6ADBD8");
+    $('#internalslice1').css("background","#c3f1ef");
+    $('#center-paragraph').html('<br>UX<br>UI<br>Business Analysis');
+
 	var hoverOrClick=function(){
 		$(this).css("background","#6ADBD8");
 		var listItem=$(this).parent();
@@ -158,7 +164,12 @@ $(document).ready(function(){
         var file = getCurrentFilename();
         var distance = (file.length === 0) ? 400 : -500;
 
-		if(scroll>=(viewportHeight + distance))
+        var pictureDistance = Number($('#tf-home').css('height').replace('px', ''));
+        if (pictureDistance > viewportHeight + distance) {
+            pictureDistance = viewportHeight + distance;
+        }
+
+		if(scroll>=pictureDistance - 28)
 		{
 		    //Page
 			$('#header-container').css("top","0px");
