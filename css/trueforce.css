@@ -1473,6 +1473,9 @@ li.v a:hover {
 }
 .featurette div {
 	text-align: center;
+	font-size: 14px;
+	font-family: 'ProximaNova-SemiBold';
+	color: #4B4B4B !important;
 }
 
 .header-arrow {
@@ -1504,4 +1507,8 @@ div.cx-ring #tf-label4 {
 div.cx-ring #tf-label3 {
 	left: 20%;
 	top: -95px;
+}
+
+.back-center-add {
+	padding: 45px 10px !important;
 }
