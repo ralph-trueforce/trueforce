@@ -46,17 +46,17 @@ $(document).ready(function(){
 			case 1:
 				text='<b>How users interact<br> with your brand</b><br><br> Solution Research<br> Usability research';
 				break;
-            case 2:
+            case 3:
                 text='<b>A design incorporating<br> youur business goals</b><br><br> Journey Mapsl<br> Blueprints';
                 break;
-            case 3:
+            case 2:
                 text='<b>Look and feel</b><br><br>Wireframes<br> Prototypes';
                 break;
             case 4:
                 text='<b>Development, testing<br> and deployment</b><br> HTML5/CSS3<br> iOS<br>Android<br>Javascript programing';
                 break;
             case 5:
-                text='<b></b><br><br> English<br> Spanish<br>German';
+                text='<br>English<br>Spanish<br>German';
 				break;
 			default:
 				text='First<br> Second<br> Third<br> Fourth<br> Fifth';
@@ -70,10 +70,10 @@ $(document).ready(function(){
             case 1:
                 text='<b>How users interact<br> with your brand</b><br><br> Solution Research<br> Usability research';
                 break;
-            case 2:
+            case 3:
                 text='<b>A design incorporating<br> youur business goals</b><br><br> Journey Mapsl<br> Blueprints';
                 break;
-            case 3:
+            case 2:
                 text='<b>HLook and feel</b><br><br>Wireframes<br> Prototypes';
                 break;
             case 4:
@@ -109,7 +109,12 @@ $(document).ready(function(){
     $('#tf-label1').css("color","#6ADBD8");
     $('#slice1').not(this).css("background","#6ADBD8");
     $('#internalslice1').css("background","#c3f1ef");
-    $('#center-paragraph').html('<br>UX<br>UI<br>Business Analysis');
+
+    if (document.location.pathname.indexOf('customer') !== -1) {
+        $('#center-paragraph').html('<b>How users interact<br> with your brand</b><br><br> Solution Research<br> Usability research');
+    } else {
+        $('#center-paragraph').html('<br>UX<br>UI<br>Business Analysis');
+    }
 
 	var hoverOrClick=function(){
 		$(this).css("background","#6ADBD8");
@@ -164,31 +169,45 @@ $(document).ready(function(){
         var file = getCurrentFilename();
         var distance = (file.length === 0) ? 400 : -500;
 
-        var pictureDistance = Number($('#tf-home').css('height').replace('px', ''));
-        if (pictureDistance > viewportHeight + distance) {
-            pictureDistance = viewportHeight + distance;
+        var homeHeight = $('#tf-home').css('height');
+        if (!homeHeight) {
+            homeHeight = $('#tf-sales').css('height');
+            if (!homeHeight) {
+                homeHeight = $('#tf-dev').css('height');
+                if (!homeHeight) {
+                    homeHeight = $('#tf-about').css('height');
+                }
+            }
         }
 
-		if(scroll>=pictureDistance - 28)
-		{
-		    //Page
-			$('#header-container').css("top","0px");
-			$('#header .navbar-default').css({"background-color":"rgba(255,255,255,0.4)", "border-bottom":"1px solid #EAEBEC"});
-			$('#header a').css("color","#4B4B4B");
-			$('#brand-image').attr("src","img/TF-LogoB.png");
-            $('ul.vert').css("background-color", "rgba(255, 255, 255, 0.4)");
-			toogleHover=true;
-		}
-		else
-		{
-		    //Header
-			$('#header-container').css("top","40px");
-			$('#header .navbar-default').css({"background-color":"rgba(0,0,0,0.4)", "border-bottom":"none"});
-			$('#header a').css("color","#FFFFFF");
-			$('#brand-image').attr("src","img/TF-LogoW.png");
-            $('ul.vert').css("background-color", "rgba(0, 0, 0, 0.4)");
-			toogleHover=false;
-		}
+        if (homeHeight) {
+            var pictureDistance = Number(homeHeight.replace('px', ''));
+            if (pictureDistance > viewportHeight + distance) {
+                pictureDistance = viewportHeight + distance;
+            }
+
+            if (scroll >= pictureDistance - 28) {
+                //Page
+                $('#header-container').css("top", "0px");
+                $('#header .navbar-default').css({
+                    "background-color": "rgba(255,255,255,0.4)",
+                    "border-bottom": "1px solid #EAEBEC"
+                });
+                $('#header a').css("color", "#4B4B4B");
+                $('#brand-image').attr("src", "img/TF-LogoB.png");
+                $('ul.vert').css("background-color", "rgba(255, 255, 255, 0.4)");
+                toogleHover = true;
+            }
+            else {
+                //Header
+                $('#header-container').css("top", "40px");
+                $('#header .navbar-default').css({"background-color": "rgba(0,0,0,0.4)", "border-bottom": "none"});
+                $('#header a').css("color", "#FFFFFF");
+                $('#brand-image').attr("src", "img/TF-LogoW.png");
+                $('ul.vert').css("background-color", "rgba(0, 0, 0, 0.4)");
+                toogleHover = false;
+            }
+        }
 	});
 	$('#header a').hover(function(){
 		if(toogleHover)
