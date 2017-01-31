@@ -1318,7 +1318,7 @@ transform: skewY(18deg) rotate(9deg);
 }
 
 .area-hexa {
-	margin: 0px auto;
+	margin: 0px auto !important;;
 	text-align: center;
 	position: relative;
 	width: 600px;
