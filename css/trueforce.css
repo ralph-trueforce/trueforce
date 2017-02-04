@@ -43,8 +43,11 @@
   font-style: normal;
 }
 @media (max-width: 1224px) {
-	#tf-label3{
+	ul.ringDev + #tf-label3{
 		left: 20% !important;
+	}
+	ul.ring + #tf-label4 + #tf-label3 {
+		left: 35% !important;
 	}
 	#tf-label4{
 		left: 20% !important;
@@ -1046,11 +1049,13 @@ transform: skewY(18deg) rotate(9deg);
 }
 #tf-label1
 {
-	left: 55%; top:30px; text-align: right;
+	left: 53%;
+	top:30px;
+	text-align: right;
 }
 #tf-label2
 {
-	left: 60%;
+	left: 61%;
 	top: -105px;
 }
 #tf-label3

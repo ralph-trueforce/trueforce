@@ -107,7 +107,7 @@ $(document).ready(function(){
     };
 
     $('#tf-label1').css("color","#6ADBD8");
-    $('#slice1').not(this).css("background","#6ADBD8");
+    $('#slice0').not(this).css("background","#6ADBD8");
     $('#internalslice1').css("background","#c3f1ef");
 
     if (document.location.pathname.indexOf('customer') !== -1) {
@@ -121,7 +121,7 @@ $(document).ready(function(){
 		var listItem=$(this).parent();
 		index=$(listItem).parent().children().index(listItem);
 		var labelSelector='#tf-label'+(index+1).toString();
-		console.log(index+1);
+		//console.log(index+1);
 		var innerSlice=$('.inner-ring li').eq(index).children();
 		innerSlice.css("background","#c3f1ef");
 		changeText(index);
@@ -130,19 +130,7 @@ $(document).ready(function(){
 		$('.inner').not(innerSlice).css("background","#e5e7e9");
 		$('.tf-label').not(labelSelector).css("color","#000000");
 	};
-    var hoverOrClickTF=function(){
-        $(this).css("background","#6ADBD8");
-        var listItem=$(this).parent();
-        index=$(listItem).parent().children().index(listItem);
-        var labelSelector='#tf-label'+(index+1).toString();
-        var innerSlice=$('.inner-ring li').eq(index).children();
-        innerSlice.css("background","#c3f1ef");
-        changeText(index);
-        $(labelSelector).css("color","#6ADBD8");
-        $('.ringTF > .sliceTF > .slice-contents').not(this).css("background","#bec3c7");
-        $('.inner').not(innerSlice).css("background","#e5e7e9");
-        $('.tf-label').not(labelSelector).css("color","#000000");
-    };
+
     var hoverOrClickDev=function(e){
         //console.log($(this));
         $(this).css("background","#6ADBD8");
@@ -174,12 +162,46 @@ $(document).ready(function(){
         $('.tf-label').not(labelSelector).css("color","#000000");
     };
 
+    var hoverInnerSliceDev=function(e) {
+        var listItem=$(this);
+        index=$(listItem).parent().children().index(listItem);
+        var choose = $( "#slice" + index );
+
+        choose.css("background", "#6ADBD8");
+        var labelSelector='#tf-label'+(index+1).toString();
+        var innerSlice=$('.inner-ring li').eq(index).children();
+        innerSlice.css("background","#c3f1ef");
+        $(labelSelector).css("color","#6ADBD8");
+        changeTextDevelopment(index);
+
+        $('.ringDev > .sliceDev > .slice-contents').not(choose).css("background","#bec3c7");
+        $('.inner').not(innerSlice).css("background","#e5e7e9");
+        $('.tf-label').not(labelSelector).css("color","#000000");
+    };
+
+    var hoverInnerSlice=function(e) {
+        var listItem=$(this);
+        index=$(listItem).parent().children().index(listItem);
+        var choose = $( "#slice" + index );
+
+        choose.css("background", "#6ADBD8");
+        var labelSelector='#tf-label'+(index+1).toString();
+        var innerSlice=$('.inner-ring li').eq(index).children();
+        innerSlice.css("background","#c3f1ef");
+        $(labelSelector).css("color","#6ADBD8");
+        changeTextDevelopment(index);
+
+        $('.ring > .slice > .slice-contents').not(choose).css("background","#bec3c7");
+        $('.inner').not(innerSlice).css("background","#e5e7e9");
+        $('.tf-label').not(labelSelector).css("color","#000000");
+    };
+
 	$('.ring > .slice > .slice-contents').hover(hoverOrClick).click(hoverOrClick);
     $('.ring > .slice').hover(hoverSlice);
-    $('.ringTF > .slice > .slice-contents').hover(hoverOrClickTF).click(hoverOrClickTF);
-    $('.ringTF > .slice').hover(hoverSlice);
     $('.ringDev > .sliceDev > .slice-contents').hover(hoverOrClickDev).click(hoverOrClickDev);
     $('.ringDev > .sliceDev').hover(hoverSlice);
+    $('.inner-ring > .sliceDev').hover(hoverInnerSliceDev);
+    $('.inner-ring > .slice').hover(hoverInnerSlice);
 
 	var toogleHover=false;
 
