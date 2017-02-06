@@ -63,27 +63,7 @@ $(document).ready(function(){
 		}
 		$('#center-paragraph').html(text);
 	};
-    var changeTextTF=function(i)
-    {
-        var text=null;
-        switch(i+1){
-            case 1:
-                text='<b>How users interact<br> with your brand</b><br><br> Solution Research<br> Usability research';
-                break;
-            case 3:
-                text='<b>A design incorporating<br> youur business goals</b><br><br> Journey Mapsl<br> Blueprints';
-                break;
-            case 2:
-                text='<b>HLook and feel</b><br><br>Wireframes<br> Prototypes';
-                break;
-            case 4:
-                text='<b>Development, testing<br> and deployment</b><br> HTML5/CSS3<br> iOS<br>Android<br>Javascript programing';
-                break;
-            default:
-                text='Front End<br>Back End<br>SOA<br>Project Management<br>Mobile';
-        }
-        $('#center-paragraph').html(text);
-    };
+
     var changeTextDevelopment=function(i)
     {
         var text=null;

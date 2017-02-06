@@ -995,7 +995,7 @@ transform: skewY(18deg) rotate(9deg);
     border-radius: 50%;
     text-align: center;
     /*padding-top: 40px;*/
-	padding: 45px 30px;
+	padding: 38px 30px;
     font-family: 'ProximaNova-Semibold';
     font-size: 14px;
     line-height: 1.5;
@@ -1515,5 +1515,5 @@ div.cx-ring #tf-label2 {
 }
 
 .back-center-add {
-	padding: 45px 10px !important;
+	padding: 35px 10px !important;
 }
