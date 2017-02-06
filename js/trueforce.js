@@ -231,6 +231,26 @@ $(document).ready(function(){
                 toogleHover = false;
             }
         }
+
+        var homeHeader = $('#tf-home').css('height');
+        if (homeHeader) {
+            var distanceHeader = Number(homeHeader.replace('px', ''));
+            console.log(distanceHeader);
+            var arrow = $('.down-arrow');
+            console.log(scroll);
+
+            if (scroll >= distanceHeader - 867) {
+                console.log('no arrow');
+                arrow.css('position', 'absolute');
+                arrow.css('margin-bottom', '-560px');
+                arrow.css('bottom', '0px');
+            } else {
+                console.log('arrow');
+                arrow.css('position', 'fixed');
+                arrow.css('margin-bottom', '0px');
+                arrow.css('bottom', '40px');
+            }
+        }
 	});
 	$('#header a').hover(function(){
 		if(toogleHover)
