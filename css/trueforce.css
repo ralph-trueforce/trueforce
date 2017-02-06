@@ -1098,7 +1098,7 @@ transform: skewY(18deg) rotate(9deg);
 
 .cloud-consulting {
 	background-color: white;
-	margin-bottom: 60px;
+	/*margin-bottom: 60px;*/
 }
 
 .areas {
@@ -1399,11 +1399,12 @@ li.v a:hover {
 }
 
 #cloud-cons {
-	background-image: url("../img/TF-HomeContactCenter.png");
+	background-image: url("../img/TF-HomeContactCenter2.png");
 	background-repeat: no-repeat;
-	height: 100%;
-	background-size: 100% 100%;
-	width: 68%;
+	background-position: right 30px center;
+	/*height: 100%;*/
+	/*background-size: 100% 100%;*/
+	/*width: 68%;*/
 }
 
 .container-fluid {
