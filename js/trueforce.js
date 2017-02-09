@@ -44,19 +44,19 @@ $(document).ready(function(){
 		var text=null;
 		switch(i+1){
 			case 1:
-				text='<b>How users interact<br> with your brand</b><br><br> Solution Research<br> Usability research';
+				text='&nbsp;<br><b>How users interact<br>with your brand</b><br><br>Solution Research<br>Usability research';
 				break;
             case 3:
-                text='<b>A design incorporating<br> youur business goals</b><br><br> Journey Mapsl<br> Blueprints';
+                text='&nbsp;<br><b>A design incorporating<br>your business goals</b><br><br>Journey Maps<br>Blueprints';
                 break;
             case 2:
-                text='<b>Look and feel</b><br><br>Wireframes<br> Prototypes';
+                text='&nbsp;<br><b>Look and feel</b><br><br>Wireframes<br>Prototypes';
                 break;
             case 4:
                 text='<b>Development, testing<br> and deployment</b><br> HTML5/CSS3<br> iOS<br>Android<br>Javascript programing';
                 break;
             case 5:
-                text='<br>English<br>Spanish<br>German';
+                text='<br>&nbsp;<br>English<br>Spanish<br>German';
 				break;
 			default:
 				text='First<br> Second<br> Third<br> Fourth<br> Fifth';
@@ -69,16 +69,16 @@ $(document).ready(function(){
         var text=null;
         switch(i+1){
             case 1:
-                text='<br>UX<br> UI<br> Business Analysis<br>';
+                text='<br>&nbsp;<br>UX<br>UI<br>Business Analysis';
                 break;
             case 2:
                 text='Front end<br>Back End<br>SOA<br>Mobile<br>Project Management<br>Product Management';
                 break;
             case 3:
-                text='<br>White Box<br>Black Box<br> Performance Testing<br>';
+                text='<br>&nbsp;<br>White Box<br>Black Box<br> Performance Testing<br>';
                 break;
             case 4:
-                text='<br>Deploy<br>Release<br>Support<br>';
+                text='<br>&nbsp;<br>Deploy<br>Release<br>Support<br>';
                 break;
             default:
                 text='Front End<br>Back End<br>SOA<br>Project Management<br>Mobile';
@@ -91,9 +91,9 @@ $(document).ready(function(){
     $('#internalslice1').css("background","#c3f1ef");
 
     if (document.location.pathname.indexOf('customer') !== -1) {
-        $('#center-paragraph').html('<b>How users interact<br> with your brand</b><br><br> Solution Research<br> Usability research');
+        $('#center-paragraph').html('&nbsp;<br><b>How users interact<br>with your brand</b><br><br>Solution Research<br>Usability research');
     } else {
-        $('#center-paragraph').html('<br>UX<br>UI<br>Business Analysis');
+        $('#center-paragraph').html('<br>&nbsp;<br>UX<br>UI<br>Business Analysis');
     }
 
 	var hoverOrClick=function(){
@@ -142,6 +142,21 @@ $(document).ready(function(){
         $('.tf-label').not(labelSelector).css("color","#000000");
     };
 
+    var hoverSliceFive=function(e) {
+        $(this).children().css("background","#6ADBD8");
+        var listItem=$(this);
+        index=$(listItem).parent().children().index(listItem);
+        var labelSelector='#tf-label'+(index+1).toString();
+        var innerSlice=$('.inner-ring li').eq(index).children();
+        innerSlice.css("background","#c3f1ef");
+        $(labelSelector).css("color","#6ADBD8");
+        changeText(index);
+
+        $('.ringDev > .sliceDev > .slice-contents').not(this.firstChild).css("background","#bec3c7");
+        $('.inner').not(innerSlice).css("background","#e5e7e9");
+        $('.tf-label').not(labelSelector).css("color","#000000");
+    };
+
     var hoverInnerSliceDev=function(e) {
         var listItem=$(this);
         index=$(listItem).parent().children().index(listItem);
@@ -169,7 +184,7 @@ $(document).ready(function(){
         var innerSlice=$('.inner-ring li').eq(index).children();
         innerSlice.css("background","#c3f1ef");
         $(labelSelector).css("color","#6ADBD8");
-        changeTextDevelopment(index);
+        changeText(index);
 
         $('.ring > .slice > .slice-contents').not(choose).css("background","#bec3c7");
         $('.inner').not(innerSlice).css("background","#e5e7e9");
@@ -177,7 +192,7 @@ $(document).ready(function(){
     };
 
 	$('.ring > .slice > .slice-contents').hover(hoverOrClick).click(hoverOrClick);
-    $('.ring > .slice').hover(hoverSlice);
+    $('.ring > .slice').hover(hoverSliceFive);
     $('.ringDev > .sliceDev > .slice-contents').hover(hoverOrClickDev).click(hoverOrClickDev);
     $('.ringDev > .sliceDev').hover(hoverSlice);
     $('.inner-ring > .sliceDev').hover(hoverInnerSliceDev);
