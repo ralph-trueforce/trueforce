@@ -1101,6 +1101,10 @@ transform: skewY(18deg) rotate(9deg);
 	/*margin-bottom: 60px;*/
 }
 
+.contanct-bottom {
+	margin-bottom: 60px;
+}
+
 .areas {
 	margin: 0 10%;
 }
