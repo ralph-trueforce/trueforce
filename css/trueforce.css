@@ -1523,3 +1523,7 @@ div.cx-ring #tf-label2 {
 .back-center-add {
 	padding: 35px 10px !important;
 }
+
+footer.row {
+	background: #4b4b4b;
+}
