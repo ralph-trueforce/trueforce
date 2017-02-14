@@ -206,8 +206,9 @@ $(document).ready(function(){
 
         var file = getCurrentFilename();
         var distance = (file.length === 0) ? 400 : -500;
+        var homeHeader = $('#tf-home');
 
-        var homeHeight = $('#tf-home').css('height');
+        var homeHeight = homeHeader.css('height');
         if (!homeHeight) {
             homeHeight = $('#tf-sales').css('height');
             if (!homeHeight) {
@@ -247,20 +248,15 @@ $(document).ready(function(){
             }
         }
 
-        var homeHeader = $('#tf-home').css('height');
-        if (homeHeader) {
-            var distanceHeader = Number(homeHeader.replace('px', ''));
-            console.log(distanceHeader);
+        if (homeHeight) {
+            var distanceHeader = Number(homeHeight.replace('px', ''));
             var arrow = $('.down-arrow');
-            console.log(scroll);
 
-            if (scroll >= distanceHeader - 867) {
-                console.log('no arrow');
+            if (scroll >= distanceHeader - 967) {
                 arrow.css('position', 'absolute');
                 arrow.css('margin-bottom', '-560px');
                 arrow.css('bottom', '0px');
             } else {
-                console.log('arrow');
                 arrow.css('position', 'fixed');
                 arrow.css('margin-bottom', '0px');
                 arrow.css('bottom', '40px');
