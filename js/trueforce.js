@@ -252,7 +252,14 @@ $(document).ready(function(){
             var distanceHeader = Number(homeHeight.replace('px', ''));
             var arrow = $('.down-arrow');
 
-            if (scroll >= distanceHeader - 967) {
+            //50% 1467
+            //60% 1367
+            //70% 1267
+            //80% 1167
+            //90% 1017
+            //100% 967
+            //110% 867
+            if (scroll >= distanceHeader - viewportHeight) {
                 arrow.css('position', 'absolute');
                 arrow.css('margin-bottom', '-560px');
                 arrow.css('bottom', '0px');
