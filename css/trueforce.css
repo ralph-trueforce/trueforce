@@ -1067,7 +1067,7 @@ transform: skewY(18deg) rotate(9deg);
 }
 #tf-label3
 {
-	left: 25%; 
+	left: 30%;
 	top: -95px; 
 	
 }
@@ -1511,7 +1511,7 @@ div.cx-ring #tf-label3 {
 
 div.cx-ring #tf-label4 {
 	text-align: right;
-	left: 27%;
+	left: 29%;
 	top: -60px;
 }
 
