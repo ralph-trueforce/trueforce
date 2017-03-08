@@ -1533,12 +1533,13 @@ footer.row {
 	line-height: 25px;
 	margin-left: 30px;
 	margin-right: 30px;
+	text-align: justify;
 }
 
 .policy-title {
 	font-family: "ProximaNova-Bold";
 	font-size: 24px;
-	line-height: 25px;
+	line-height: 26px;
 	margin-left: 30px;
 	margin-right: 30px;
 }
@@ -1549,5 +1550,5 @@ a.policy-anchor {
 }
 
 a.policy-anchor:hover {
-	color: #4B4B4B;
+	color: #333;
 }
